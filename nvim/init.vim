@@ -23,13 +23,9 @@ Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'https://github.com/folke/tokyonight.nvim.git'
-Plug 'https://github.com/puremourning/vimspector.git'
 Plug 'junegunn/fzf' " Fuzzy finder
 Plug 'mfussenegger/nvim-dap' " Neovim DAP debugger
-Plug 'vimwiki/vimwiki' " Vim wiki
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } " vim markdown preview
 Plug 'morhetz/gruvbox'
-Plug 'artanikin/vim-synthwave84'
 
 set encoding=UTF-8
 
@@ -46,7 +42,7 @@ nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>w :tabclose<CR>
 nnoremap <leader>n :tabnext<CR>
 
-nnoremap <leader>pr :MarkdownPreview<CR>
+" nnoremap <leader>pr :MarkdownPreview<CR>
 
 nmap <F8> :TagbarToggle<CR>
 
@@ -58,7 +54,6 @@ let g:markdown_fenced_languages = [
 let g:gruvbox_transparent_bg = 1
 let g:gruvbox_constrast_dark='hard'
 :set background=dark
-:set termguicolors 
 :colorscheme gruvbox
 :set completeopt-=preview " For No Previews
 
