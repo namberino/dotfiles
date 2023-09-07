@@ -109,9 +109,6 @@ export LC_ALL=en_US.UTF-8
 
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cat="bat"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 
 # export c/c++ libraries
 export CPATH=/usr/local/include
@@ -120,8 +117,8 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="/usr/local/opt/llvm/bin:$PATH"
-#alias python='python3'
 #alias pip='pip3'
+alias python='python3'
 export PATH="$HOME/tools/node-v14.15.4-linux-x64/bin:$PATH"
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 alias ls='lsd'
@@ -138,13 +135,9 @@ export PICO_SDK_PATH="/Users/nam/Lab/embedded/pico/pico-sdk"
 
 export CC=/usr/local/bin/gcc
 export CXX=/usr/local/bin/g++
-if command -v pyenv 1>/dev/null 2>&1; then
-    eval "$(pyenv init -)"
-fi
-
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH=/usr/local/mysql/bin:$PATH
-alias python='/Library/Frameworks/Python.framework/Versions/3.11/bin/python3'
 export REQUESTS_CA_BUNDLE="$HOME/.mac-ca-roots"
+export PATH=$PATH:~/Lab/nand2tetris/tools
