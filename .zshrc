@@ -116,7 +116,6 @@ export LIBRARY_PATH=/usr/local/lib
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export PATH="/usr/local/opt/llvm/bin:$PATH"
 #alias pip='pip3'
 alias python='python3'
 export PATH="$HOME/tools/node-v14.15.4-linux-x64/bin:$PATH"
@@ -129,7 +128,6 @@ export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="/usr/local/opt/llvm/bin:$PATH"
 export HISTTIMEFORMAT="%d/%m/%y %T "
 export PICO_SDK_PATH="/Users/nam/Lab/embedded/pico/pico-sdk"
 
@@ -141,3 +139,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export PATH=/usr/local/mysql/bin:$PATH
 export REQUESTS_CA_BUNDLE="$HOME/.mac-ca-roots"
 export PATH=$PATH:~/Lab/nand2tetris/tools
+export PATH="/usr/local/Cellar/llvm/16.0.6/bin${PATH:+:${PATH}}"
