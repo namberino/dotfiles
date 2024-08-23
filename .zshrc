@@ -1,9 +1,12 @@
+# figlet -w 145 -c WELCOME NAM | lolcat
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+export PATH=$PATH:$HOME/.local/bin
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -109,6 +112,7 @@ export LC_ALL=en_US.UTF-8
 
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ls="lsd"
 
 # export c/c++ libraries
 export CPATH=/usr/local/include
@@ -118,10 +122,10 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #alias pip='pip3'
 alias python='python3'
+#alias python='/usr/local/bin/python3.11'
+export PATH="$PATH:/usr/local/bin/"
 export PATH="$HOME/tools/node-v14.15.4-linux-x64/bin:$PATH"
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-alias ls='lsd'
-alias cat='bat'
 
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 
@@ -131,8 +135,8 @@ export NVM_DIR="$HOME/.nvm"
 export HISTTIMEFORMAT="%d/%m/%y %T "
 export PICO_SDK_PATH="/Users/nam/Lab/embedded/pico/pico-sdk"
 
-export CC=/usr/local/bin/gcc
-export CXX=/usr/local/bin/g++
+export CC=/usr/bin/gcc
+export CXX=/usr/bin/g++
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -140,3 +144,9 @@ export PATH=/usr/local/mysql/bin:$PATH
 export REQUESTS_CA_BUNDLE="$HOME/.mac-ca-roots"
 export PATH=$PATH:~/Lab/nand2tetris/tools
 export PATH="/usr/local/Cellar/llvm/16.0.6/bin${PATH:+:${PATH}}"
+export PATH="$PATH:/usr/local/Cellar/"
+export PATH="$PATH:/opt/X11/bin"
+export PATH="$PATH:/Users/nam/Library/Python/3.11/bin"
+export PATH="$PATH:/usr/local/Cellar/python@3.11/3.11.9_1/bin/"
+
+export PATH="/usr/local/opt/binutils/bin:$PATH"
