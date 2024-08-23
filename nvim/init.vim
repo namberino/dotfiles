@@ -6,6 +6,7 @@
 :set smarttab
 :set softtabstop=4
 :set mouse=a
+:set clipboard=unnamedplus
 
 :let mapleader = " "
 
@@ -26,6 +27,8 @@ Plug 'https://github.com/folke/tokyonight.nvim.git'
 Plug 'junegunn/fzf' " Fuzzy finder
 Plug 'mfussenegger/nvim-dap' " Neovim DAP debugger
 Plug 'morhetz/gruvbox'
+Plug 'vhda/verilog_systemverilog.vim'
+Plug 'suoto/hdlcc'
 
 set encoding=UTF-8
 
@@ -46,10 +49,16 @@ nnoremap <leader>n :tabnext<CR>
 
 nmap <F8> :TagbarToggle<CR>
 
+:set ft=nasm
+:set ft=yasm
+:set ft=asm
+
 let g:markdown_fenced_languages = [
 	\ 'vim',
 	\ 'help',
 	\ 'nasm',
+	\ 'asm',
+	\ 'yasm',
 	\]
 let g:gruvbox_transparent_bg = 1
 let g:gruvbox_constrast_dark='hard'
